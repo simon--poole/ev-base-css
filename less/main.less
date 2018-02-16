@@ -1,0 +1,21 @@
+// Import mixins
+@import "common/mixins.less";
+@highlight: #ffe242;
+@dark:  #0b1a2a;
+/* How to add temporary thumbnails
+============================================
+.self .thumbnail[href*="phrase_in_post_url"]{
+   background: url(%%reddit_image_name%%);
+}
+============================================
+>> Place at the very top of CSS. */
+
+// Components
+@import "common/general.less";
+@import "common/header.less";
+@import "common/posts.less";
+@import "common/sidebar.less";
+@import "common/tables.less";
+@import "common/thumbnails.less";
+@import "common/flairs.less";
+@import (optional) "overrides.less";

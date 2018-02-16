@@ -1,0 +1,219 @@
+.side {
+    width: 325px;
+    margin: 36px 10px 0 5px;
+    h4, h5 {
+        height: 0;
+    }
+    #search input[type="text"] {
+        width: 100%;
+        .border-radius
+    }
+    .login-form-side {
+        .border-radius;
+        input[type="text"] {
+            .border-radius;
+            margin: 5px 3px 0px 5px!important;
+            width: 154px;
+        }
+        input[type="password"] {
+            .border-radius;
+            width: 154px;
+            margin: 5px 5px 0px 2px!important;
+        }
+    }
+}
+
+
+/* Table in sidebar */
+
+.side {
+    .md table {
+        width: 325px;
+        margin: -5px 10px 10px -10px;
+        border-bottom: none;
+        border-collapse: collapse;
+        color: #0a5a36!important;
+        font-size: 11px;
+        .box-shadow(1px 1px 1px #193064);
+        thead {
+            display: none;
+        }
+        td {
+            border: 0!important;
+            line-height: 20px;
+            &[align="left"] a {
+                float: right;
+            }
+            &[align="right"] a {
+                float: left;
+            }
+        }
+    }
+}
+
+
+/* Drop downs */
+
+.side .titlebox .md {
+    ul {
+        list-style-type: none;
+        padding-left: 10px;
+        li {
+            display: none;
+            background-color: #eee;
+            width: 310px;
+            line-height: 18px;
+            font-weight: normal;
+            font-size: 12px;
+            margin: 0 0 0 -21px;
+            border-left: 7px solid #ccc;
+            border-bottom: 1px solid #bbb;
+            padding: 5px 2px 5px 8px;
+            &:hover {
+                background-color: #ccc;
+            }
+            &:nth-child(1) {
+                .sidebar-header;
+                margin-left: -21px;
+                display: block;
+                &:hover {
+                    border-left: 7px solid @highlight;
+                }
+            }
+            &:nth-child(2) {
+                margin-top: -5px;
+            }
+        }
+        &:hover li, &:first-of-type li {
+            display: block;
+        }
+    }
+    // Hide divider
+    hr {
+        display: none;
+    }
+    // Hide team icon from displaying for RES nightmode compatible tag
+    a[href$="Compatible"]:after {
+        content: none!important;
+    }
+}
+
+/* Modify submit a new post, hide "submit link" button */
+
+.submit {
+	.morelink {
+	    background: @dark!important;
+	    border: 0;
+	    border-top: 3px solid @dark;
+	    border-bottom: 3px solid @dark;
+	    &:hover {
+	        border-bottom: 3px solid @highlight;
+	        &.disabled {
+	        	border: 0;
+	        }
+	    }
+	    a {
+	    	color: #FFF;
+	    }
+	    .nub {
+	        display: none;
+	    }
+	}
+	&.disabled {
+		display: none;
+	}
+}
+
+.submit-link {
+    display: none;
+}
+
+
+/* Subscribers */
+
+.subscribers {
+    .word {
+        display: none;
+    }
+    .number::after {
+        content: " subscribers";
+    }
+}
+
+
+/* Users here now */
+
+.users-online .word {
+    display: none;
+}
+
+.users-online .number::after {
+    content: " viewers online now";
+}
+
+
+/* User flair */
+
+.flairselector .customizer {
+    display: none!important;
+}
+
+
+/* Sidebar headings */
+
+.sidecontentbox .content, .linkinfo, .footer {
+    background: transparent!important;
+    font-size: small;
+    border: 1px solid #ccc;
+    margin: 7px 0 0;
+    .border-radius(10px);
+}
+
+.titlebox {
+    padding: 10px;
+    background: transparent!important;
+    border: none;
+    color: #000;
+    .bottom {
+        display: none;
+    }
+    form.toggle {
+        background-color: transparent!important;
+    }
+    .usertext {
+        margin: 15px 0;
+        line-height: 120%;
+        .md {
+            margin: 0;
+            padding: 0;
+            overflow: visible;
+            > h1 {
+                .sidebar-header;
+            }
+        }
+    }
+}
+
+.sidecontentbox a.helplink {
+    margin-right: 5px;
+}
+
+.icon-menu a {
+    background: transparent;
+}
+
+
+/* hide "Create your own subreddit" button */
+
+div.sidebox.create {
+    display: none;
+}
+
+#ad-frame, #ad_main, .sponsorshipbox {
+	width: 325px;
+	max-width: 325px;
+	text-align: center;
+	> iframe {
+		width: 300px!important;
+	}
+}

@@ -1,0 +1,9 @@
+# Ignore generated sprites directory
+./visual-resources/generated-sprites
+
+# OSX
+.DS_Store
+
+# Folders
+node_modules
+dist

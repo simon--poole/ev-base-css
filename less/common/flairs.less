@@ -1,0 +1,159 @@
+@postflair-width: -120px;
+@postflair-height: -20px;
+@slide-time: 0.3s;
+
+/* Users */
+
+.flair {
+	background: transparent;
+	border: 0;
+	
+	&:before {
+		content: "";
+		background: url(%%user-flairs%%) transparent;
+		display: inline-block;
+		border: 0;
+		padding: 0;
+		width: 21px;
+		height: 21px;
+		vertical-align: middle;
+	}
+	&-dev:before {
+		background-position: -5px -6px;
+	}
+	&-staff:before {
+		background-position: -5px -37px;
+	}
+	&-donator:before {
+		background-position: -5px -68px;
+	}
+	&-updater:before {
+		background-position: -5px -98px;
+	}
+}
+
+/* Links */
+
+.linkflairlabel {
+	display: none;
+}
+.linkflair- {
+	&ongoing,
+	&finished,
+	&featured,
+	&upcoming,
+	&twitchongoing,
+	&twitchfinished,
+	&twitchfeatured,
+	&twitchupcoming {
+		.thumbnail:before,
+		.flairselector & .linkflairlabel,
+		.flairtemplate & .linkflairlabel {
+			background: url(%%post-flairs%%) no-repeat top left;
+			content: "";
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			width: -@postflair-width;
+			height: -@postflair-height;
+		}
+		.thumbnail:before {
+			position: relative;
+			top: 50px;
+			left: 58px;
+			transition: left @slide-time;
+		}
+		&:hover .thumbnail:before {
+			left: -20px;
+			transition: left @slide-time;
+		}
+	}
+	&ongoing {
+		.thumbnail:before,
+		.flairselector & .linkflairlabel,
+		.flairtemplate & .linkflairlabel {
+			.bg-pos;
+		}
+	}
+	&finished {
+		.thumbnail:before,
+		.flairselector & .linkflairlabel,
+		.flairtemplate & .linkflairlabel {
+			.bg-pos(0, @postflair-height);
+		}
+	}
+	&featured {
+		.thumbnail:before,
+		.flairselector & .linkflairlabel,
+		.flairtemplate & .linkflairlabel {
+			.bg-pos(0, @postflair-height * 2);
+		}
+	}
+	&upcoming {
+		.thumbnail:before,
+		.flairselector & .linkflairlabel,
+		.flairtemplate & .linkflairlabel {
+			.bg-pos(0, @postflair-height * 3);
+		}
+	}
+	&twitchongoing {
+		.thumbnail:before,
+		.flairselector & .linkflairlabel,
+		.flairtemplate & .linkflairlabel {
+			.bg-pos(0, @postflair-height * 4);
+		}
+	}
+	&twitchfinished {
+		.thumbnail:before,
+		.flairselector & .linkflairlabel,
+		.flairtemplate & .linkflairlabel {
+			.bg-pos(0, @postflair-height * 5);
+		}
+	}
+	&twitchfeatured {
+		.thumbnail:before,
+		.flairselector & .linkflairlabel,
+		.flairtemplate & .linkflairlabel {
+			.bg-pos(0, @postflair-height * 6);
+		}
+	}
+	&twitchupcoming {
+		.thumbnail:before,
+		.flairselector & .linkflairlabel,
+		.flairtemplate & .linkflairlabel {
+			.bg-pos(0, @postflair-height * 7);
+		}
+	}
+	&featured,
+	&twitchfeatured {
+		a.title {
+			color: red!important;
+		}
+	}
+	&announce {
+		a.title {
+			color: red!important;
+			text-transform: uppercase;
+			text-shadow: 0px 0px 20px blue;
+		}
+	}
+}
+.flairoptionpane ul {
+	width: 300px!important;
+}
+.flairselector .linkflairlabel {
+	.hide-text;
+	padding-right: 20px!important;
+}
+
+/* No flairs on front page */
+.listing-page {
+  
+  #siteTable .flair {
+    display: none;
+  }
+  .linklisting .thing, .linklisting .tagline {
+    font-size: 10.5px;
+  }
+}

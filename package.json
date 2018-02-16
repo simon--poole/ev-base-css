@@ -1,0 +1,22 @@
+{
+  "name": "ev-base-css",
+  "description": "Eventvods base CSS layout for all subreddits.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simon--poole/ev-base-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simon--poole/ev-base-css/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-clean": "*",
+    "gulp-cssbeautify": "*",
+    "gulp-cssmin": "*",
+    "gulp-less": "*",
+    "gulp-rename": "*",
+    "gulp-util": "*"
+  }
+}

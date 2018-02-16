@@ -1,0 +1,130 @@
+/* alien */
+
+#header-img-a {
+	position: absolute;
+	content: "";
+	display: inline-block;
+	top: 145px;
+	left: 0px;
+	width: 35px;
+	height: 34px;
+	border-top: 1px solid @highlight;
+	background: url(%%alien%%) no-repeat;
+	&:hover {
+		.bg-pos(0, -34px);
+	}
+}
+#header-img {
+	display: none;
+}
+.titlebox form {
+	position: static;
+}
+
+/* This lowers the links to create space */
+
+.content {
+	padding-top: 2px;
+	margin-top: 41px;
+}
+
+/* Header image */
+
+#header {
+	border: none;
+}
+#header-bottom-left {
+	background: @dark;
+	height: 125px;
+	border-bottom: 1px solid @highlight;
+	span.pagename {
+		font-size: 0!important;
+		a {
+			display: block;
+			height: 80px;
+			width: 340px;
+			margin-left: 30px;
+			margin-top: 23px;
+			background: url(%%logo%%) no-repeat scroll 0 0 transparent;
+			background-size: 340px 80px;
+			overflow: hidden;
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+}
+.redditname a {
+	text-indent: -1px;
+	margin-top: 30px;
+	color: white;
+	font-family: Optima, Segoe, sans-serif;
+	font-weight: normal;
+	display: none;
+	float: left;
+}
+
+/* Moves userbar down below header image */
+
+#header-bottom-right {
+	top: 145px!important;
+	line-height: 26px;
+	padding-left: 15px;
+	border-top: 1px solid @highlight;
+	background: @dark;
+	border-radius: 0;
+	z-index: 20;
+	a {
+		color: #fff;
+	}
+}
+.user {
+	color: #fff;
+	.userkarma {
+		border-color: #fff;
+	}
+}
+.separator {
+	color: #bbb;
+}
+
+
+/* Hides tabmenu */
+
+#header .tabmenu {
+	display: none;
+}
+.link.last-clicked {
+	overflow: hidden;
+}
+
+/* Top announcement.
+ * It works by enabling <h6/> in the sidebar as a announcement banner on top
+ * of the main subreddit content.
+ */
+
+.titlebox .usertext-body .md h6 {
+	position: absolute;
+	top: 145px;
+	left: 0;
+	right: 0;
+	padding: 4px 13px 4px 13px;
+	margin-top: 0px;
+	margin-left: 35px;
+	display: block;
+	border-top: 1px solid @highlight;
+	background: @dark;
+	font-family: Optima, Segoe, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	text-align: left;
+	text-decoration: none;
+	line-height: 26px;
+}
+h6 a {
+	color: @highlight!important;
+	&:hover {
+		text-decoration: underline;
+	}
+}

@@ -1,0 +1,97 @@
+/* Hover to view comments */
+.md {
+  h5 + p, h5 + ul, h5 + ol {
+    max-height: 0px;
+    overflow: hidden;
+    -webkit-transition: max-height 0.4s cubic-bezier(0, 1.05, 0, 1);
+    -moz-transition: max-height 0.4s cubic-bezier(0, 1.05, 0, 1);
+    transition: max-height 0.4s cubic-bezier(0, 1.05, 0, 1);
+  }
+  h5:hover + p, h5:hover + ul, h5:hover + ol,
+  h5 + p:hover, h5 + ul:hover, h5 + ol:hover {
+    max-height: 1500px;
+    -webkit-transition: max-height 0.8s;
+    -moz-transition: max-height 0.8s;
+    transition: max-height 0.8s;
+  }
+}
+
+/* Visited links color change */
+.entry {
+  a:visited {
+    color: #551a8b;
+    &[href*=".eventvods.com"] {
+      color: #0079d3!important;
+    }
+  }
+}
+.res-nightmode {
+	.entry .md table {
+		a {
+			color: #1c75cd;
+		}
+		a:hover, a:visited {
+			color: #551a8b;
+		}
+		a:visited[href*=".eventvods.com"] {
+			color: #1c75cd!important;
+		}
+	}
+}
+
+.md,
+.res-nightmode .md,
+html:lang(dd) .md {
+  max-width: 74em!important;
+}
+
+/* Red text in posts & disabled stylesheet warning */
+.usertext-body  {
+  h4 {
+    color: #f00;
+    font-weight: bold;
+  }
+  blockquote a[href="#no_stylesheet"] {
+    display: none;
+    &:after {
+      content: none!important;
+    }
+  }
+}
+
+/* Hides video expandos in posts and wiki */
+.usertext-body .md,
+.wiki-page-content .md {
+  .RESdupeimg, .expando-button.video,
+  .expando-button.video.collapsed,
+  .expando-button.video.expanded {
+    display: none!important;
+  }
+}
+
+/* Hides downvote arrow on posts only; still accessible on comments*/
+.arrow.down {
+  visibility: hidden;
+  display: none;
+}
+.comment .arrow.down {
+  visibility: visible;
+  display: block;
+}
+
+/* Resizes font in post titles */
+.thing .title {
+  margin-top: 10px;
+  font-size: 17px!important;
+}
+
+/* Notice in comment box */
+.commentarea {
+  position: static;
+  .usertext textarea {
+		background-image: url(%%comment-rules%%);
+		background-repeat: no-repeat;
+		border: 1px solid #ccc;
+		&:focus { .bg-pos(-525px, -125px); }
+  }
+}

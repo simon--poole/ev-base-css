@@ -1,0 +1,59 @@
+/* Hides domain, leave contributor button & RES nav annotations */
+#viewImagesButton,
+.domain,
+.side .leavecontributor-button,
+table .keyNavAnnotation,
+#siteTable .keyNavAnnotation,
+a[href^="#"] + .keyNavAnnotation {
+  display: none;
+}
+.link.last-clicked {
+  overflow: hidden;
+}
+
+/* Timestamps */
+.edited-timestamp::after {
+  content:" (" attr(title) ")";
+  font-size: 90%;
+}
+.wiki-page {
+    .wiki-page-content {
+        .wiki.md {
+            max-width: none!important;
+        }
+    }
+}
+
+.entry.RES-keyNav-activeElement {
+	background: inherit!important;
+}
+a[href="/spoiler"],
+a[href="#spoiler"] {
+  background: none repeat scroll 0 0 #000 !important;
+  color: #000 !important;
+  cursor: default;
+  border-radius: 3px;
+  padding: 0 3px;
+  &:hover {
+    color: #fff !important;
+  }
+}
+/* Resizes stylesheet editor box, wiki editor/revision boxes */
+.sheets .col,
+.wikirevisionlisting,
+.wiki-page-content #editform {
+  width: 94%!important;
+}
+
+/* Hide rank and vertically center votes
+ * Adds padding too
+ */
+#siteTable .thing {
+  padding-left: 5px;
+  .rank {
+    display: none;
+  }
+  .midcol {
+    margin-top: 10px;
+  }
+}
