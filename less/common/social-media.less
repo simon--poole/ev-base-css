@@ -1,0 +1,36 @@
+@social-height: -49px;
+
+.side p {
+	/* sidebar social media icons */
+	a[href="https://www.facebook.com/eventvods"], a[href="https://www.twitter.com/eventvods"], a[href="http://www.youtube.com/loleventvods"], a[href="http://www.eventvods.com/donate"] {
+		display: inline-block;
+		background: url(%%network%%) no-repeat;
+		width: 147px;
+		height: -@social-height;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		margin-left: 3px;
+		&:hover {
+			opacity: 0.6
+		}
+	}
+	a[href="https://www.facebook.com/eventvods"] {
+		.bg-pos;
+		.social-left-col();
+		.social-top-row();
+	}
+	a[href="https://www.twitter.com/eventvods"] {
+		.bg-pos(0, @social-height);
+		.social-right-col();
+		.social-top-row();
+	}
+	a[href="http://www.youtube.com/loleventvods"] {
+		.bg-pos(0, @social-height * 2);
+		.social-left-col();
+	}
+	a[href="http://www.eventvods.com/donate"] {
+		.bg-pos(0, @social-height * 3);
+		.social-right-col();
+	}
+}
