@@ -217,3 +217,40 @@ div.sidebox.create {
 		width: 300px!important;
 	}
 }
+.titlebox blockquote {
+    border: none;
+    padding-left: 0;
+    p {
+        width: 300px;
+        min-height: 100px;
+        margin: 5px 0;
+    }
+    a[href="/r/loleventvods"], a[href="/r/dotavods"], a[href="/r/hearthstonevods"], a[href="/r/cseventvods"], a[href="/r/SpoilerFreeSC"], a[href="/r/overwatched"] {
+        .hide-text;
+        padding: 0 300px 85px 0;
+        background: url(%%network%%) top left no-repeat;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    a[href="/r/dotavods"] {
+        .bg-pos(0, -100px);
+    }
+    a[href="/r/hearthstonevods"] {
+        .bg-pos(0, -200px);
+    }
+    a[href="/r/cseventvods"] {
+        .bg-pos(0, -300px);
+    }
+    a[href="/r/SpoilerFreeSC"] {
+        .bg-pos(0, -400px);
+    }
+    a[href="/r/overwatched"] {
+        .bg-pos(0, -500px);
+    }
+    // Fall-back for "Stay connected" and "Related subreddits" sections
+    // in case stylesheet is disabled or doesn't load
+    ul {
+        display: none;
+    }
+}
